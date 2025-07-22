@@ -470,7 +470,7 @@
             color: #333;
         }
 
-        /* Footer - Minimized */
+        /* Footer */
         footer {
             background: #000;
             padding: 2rem 0;
@@ -480,55 +480,25 @@
 
         .footer-content {
             display: flex;
-            justify-content: space-between;
+            justify-content: space-around;
             align-items: center;
-            flex-wrap: wrap;
-            gap: 2rem;
         }
 
         .footer-logo {
-            font-size: 1.5rem;
-            font-weight: 900;
+            font-size: 1.2rem;
+            font-weight: 500;
+            font-family: "Jetbrains Mono";
             color: #00ffff;
         }
-
-        .footer-links {
-            display: flex;
-            gap: 2rem;
-        }
-
-        .footer-links a {
-            color: #ccc;
-            text-decoration: none;
-            transition: color 0.3s ease;
-        }
-
-        .footer-links a:hover {
+        
+        .footer-logo a {
             color: #00ffff;
+            text-decoration: underline;
+            transition: 0.2s;
         }
 
-        .footer-social {
-            display: flex;
-            gap: 1rem;
-        }
-
-        .social-icon {
-            width: 40px;
-            height: 40px;
-            background: rgba(0, 255, 255, 0.2);
-            border: 1px solid rgba(0, 255, 255, 0.3);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #00ffff;
-            text-decoration: none;
-            transition: all 0.3s ease;
-        }
-
-        .social-icon:hover {
-            background: #00ffff;
-            color: black;
+        .footer-logo a:hover {
+            color: #fff;
         }
 
         /* Mobile Responsiveness */
@@ -569,11 +539,6 @@
             .footer-content {
                 flex-direction: column;
                 text-align: center;
-            }
-
-            .footer-links {
-                flex-wrap: wrap;
-                justify-content: center;
             }
         }
 
@@ -633,14 +598,14 @@
                 
                 <div class="category fade-in">
                     <div class="category-content">
-                        <h3 class="category-title">Football</h3>
-                        <p class="category-description">Celebrate the beautiful game with our dynamic football poster collection. From legendary players to iconic moments, perfect for fans and sports enthusiasts.</p>
-                        <a href="#" class="category-btn">Browse Football</a>
+                        <h3 class="category-title">Sports</h3>
+                        <p class="category-description">Celebrate the beautiful game with our dynamic sports poster collection. From legendary players to iconic moments, perfect for fans and sports enthusiasts.</p>
+                        <a href="#" class="category-btn">Browse Sports</a>
                     </div>
                     <div class="category-showcase">
                         <img src="images/football.jpg" class="poster-placeholder">
-                        <div class="poster-placeholder">🏆</div>
-                        <div class="poster-placeholder">🥅</div>
+                        <img src="images/football1.jpg" class="poster-placeholder">
+                        <img src="images/football2.jpg" class="poster-placeholder">
                     </div>
                 </div>
                 
@@ -651,9 +616,9 @@
                         <a href="#" class="category-btn">Browse Cars</a>
                     </div>
                     <div class="category-showcase">
-                        <div class="poster-placeholder">🏎️</div>
-                        <div class="poster-placeholder">🚗</div>
-                        <div class="poster-placeholder">🔥</div>
+                        <img src="images/car.jpg" class="poster-placeholder">
+                        <img src="images/car1.jpg" class="poster-placeholder">
+                        <img src="images/car2.jpg" class="poster-placeholder">
                     </div>
                 </div>
             </div>
@@ -668,22 +633,22 @@
                 <div class="review-card fade-in">
                     <div class="stars">★★★★★</div>
                     <p>"Absolutely stunning quality! The colors are vibrant and the material is top-notch. My office has never looked better."</p>
-                    <h4>- Sarah Chen</h4>
+                    <h4>- Iyed Baassou</h4>
                 </div>
                 <div class="review-card fade-in">
                     <div class="stars">★★★★★</div>
                     <p>"Fast shipping, excellent customer service, and the custom stickers exceeded my expectations. Will definitely order again!"</p>
-                    <h4>- Mike Rodriguez</h4>
+                    <h4>- Mehdi Zigha</h4>
                 </div>
                 <div class="review-card fade-in">
                     <div class="stars">★★★★★</div>
                     <p>"DEST transformed my living room. The art posters are museum quality and arrived perfectly packaged. Highly recommended!"</p>
-                    <h4>- Emma Thompson</h4>
+                    <h4>- Steven Hawking</h4>
                 </div>
                 <div class="review-card fade-in">
                     <div class="stars">★★★★★</div>
                     <p>"Professional service from start to finish. The business graphics helped elevate our brand presence significantly."</p>
-                    <h4>- David Kim</h4>
+                    <h4>- Salah Boularouk</h4>
                 </div>
             </div>
         </div>
@@ -717,24 +682,12 @@
     <footer>
         <div class="container">
             <div class="footer-content">
-                <div class="footer-logo">DEST</div>
-                <div class="footer-links">
-                    <a href="#products">Posters</a>
-                    <a href="#reviews">Reviews</a>
-                    <a href="#contact">Contact</a>
-                    <a href="#">Privacy</a>
-                </div>
-                <div class="footer-social">
-                    <a href="#" class="social-icon">📷</a>
-                    <a href="#" class="social-icon">📘</a>
-                    <a href="#" class="social-icon">🐦</a>
-                </div>
+                <div class="footer-logo">Made with ❤️ and code by <a href="https://iyedoo.github.io/portfolio/" type="blank">Iyed Baassou</a></div>
             </div>
         </div>
     </footer>
 
     <script>
-        // Smooth scrolling for navigation links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
@@ -748,7 +701,6 @@
             });
         });
 
-        // Navbar background change on scroll
         window.addEventListener('scroll', () => {
             const navbar = document.getElementById('navbar');
             if (window.scrollY > 100) {
@@ -758,7 +710,6 @@
             }
         });
 
-        // Fade in animation on scroll
         const observerOptions = {
             threshold: 0.1,
             rootMargin: '0px 0px -50px 0px'
@@ -776,7 +727,6 @@
             observer.observe(el);
         });
 
-        // Pause slider on hover
         const reviewsTrack = document.querySelector('.reviews-track');
         reviewsTrack.addEventListener('mouseenter', () => {
             reviewsTrack.style.animationPlayState = 'paused';
